@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a6262355-c04e-48a0-9b70-2de9f2adb351": {
+      "ProjectGuid": "a6262355-c04e-48a0-9b70-2de9f2adb351",
+      "DisplayName": "FiorelloBack",
+      "ColorIndex": 0
+    },
+    "5a039868-a740-4c21-9325-8b0fc696e34f": {
+      "ProjectGuid": "5a039868-a740-4c21-9325-8b0fc696e34f",
+      "DisplayName": "FiorelloBack",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

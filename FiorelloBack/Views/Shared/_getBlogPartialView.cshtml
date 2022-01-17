@@ -1,0 +1,55 @@
+﻿@model List<Blog>
+
+<section id="fromOurBlog">
+
+            <div class="container">
+                <div class="fromOurBlogTitle">
+                    <div class="BlogTitle">
+                        <h2>From our Blog</h2>
+                    </div>
+                    <div class="BlogInfo">
+                        <p>A perfect blend of creativity, energy, communication, happiness and love. Let us <br> arrange
+                            a
+                            smile for you.</p>
+                    </div>
+                </div>
+                <div class="Blogger row  row-cols-4 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                   @foreach (Blog blog in Model)
+            {
+                 <div class="col col-lg-4 col-md-4 col-sm-6 col-12">
+                        <div class="blogCards card bg-body">
+                            <div class="dateTime">
+                                <span>@blog.DateTime.ToString("MM.dd.yyyy")</span>
+                            </div>
+                            @foreach (BlogImage blogImage in blog.BlogImages)
+                           {
+                                 @if(blogImage.IsMain)
+                        { <div class="cardImage">
+                                <a asp-controller="blog" asp-action="details" asp-route-page="@blog.Id">
+                                    <img src="@blogImage.Image" class="card-img-top" alt="">
+                                </a>
+                        </div>
+                        }
+                           }
+                      
+                        <div class="card-body p-4">
+                                <div class="text-center">
+
+                                    <h6 class="fw-bolder">@blog.Title</h6>
+
+                                    <p>@blog.SubTitle</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+            }
+
+
+                   
+                    
+
+                </div>
+            </div>
+
+        </section>

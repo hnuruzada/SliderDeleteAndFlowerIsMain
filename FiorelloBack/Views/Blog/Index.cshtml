@@ -1,0 +1,6 @@
+﻿@model List<Blog>
+@{
+    ViewData["Title"] = "Index";
+}
+
+@await Html.PartialAsync("_getBlogPartialView",Model)

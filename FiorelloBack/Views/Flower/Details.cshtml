@@ -1,0 +1,296 @@
+﻿@model Flower
+
+@{
+    ViewData["Title"] = "Details";
+   
+}
+
+ 
+        
+        <section id="productlist">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="headTitle py-5">
+                            <h1>Product List</h1>
+                            <p>Where flowers are our inspiration</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <section id="gallery">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 " id="leftorange">
+                        <ul class="pgwSlider">
+                            
+                        @foreach (FlowerImage image in Model.FlowerImages.Where(i=>i.IsMain==false))
+                    {
+                       
+                        <li><img data-bs-toggle="modal" data-bs-target="#exampleModal1" src="~/Assets/images/@image.Image">@image.Id</li>
+                       }
+                        </ul>
+
+                        <div class="orangemodal">
+                            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="single-item">
+                                                  @foreach (FlowerImage image in Model.FlowerImages)
+                       {
+                           <div><img src="~/Assets/images/@image.Image"></div>
+                       }
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="single-item">
+                                               @foreach (FlowerImage image in Model.FlowerImages)
+                       {
+                           <div><img src="~/Assets/images/@image.Image"></div>
+                       }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="single-item">
+                                                @foreach (FlowerImage image in Model.FlowerImages)
+                       {
+                           <div><img src="~/Assets/images/@image.Image"></div>
+                       }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="single-item">
+                                              @foreach (FlowerImage image in Model.FlowerImages)
+                       {
+                           <div><img src="~/Assets/images/@image.Image"></div>
+                       }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6" id="rightorange">
+                        <div class="summary entry-summary">
+                            <h2 class="headTitle">@Model.Name</h2>
+                    @if (Model.CampaignId == null)
+                    {
+                        <p class="price">$@Model.Price</p>
+                    }
+                    else
+                    {
+                        <p style="text-decoration:line-through;" class="price">$@Model.Price</p><p class="price">$@(Model.Price*(100-Model.Campaign.DiscountPercent)/100)</p>
+                    }
+                    <div class="p-description">
+                                <p>@Model.Description</p>
+                            </div>
+                            <form class="cart">
+                                <div class="quantity-buttons">
+                                    <input class="number" type="number" id="quantity" name="quantity" placeholder="Quantity" min="1" max="10"><br><br>
+                                    <button type="submit">Add to cart</button></div>
+                            </form>
+                            <div class="product_meta">
+                                <span class="normal">SKU: <a>@Model.SkuCode</a></span><br>
+                                <span class="normal">Categories: 
+                                    @foreach (FlowerCategory flowerCategory in Model.FlowerCategories)
+                                   {
+                                       <a href="">@flowerCategory.Category.Name,</a>
+                                   }
+                                </span><br>
+                                <span class="normal">Tags: 
+                                    @foreach (FlowerTag flowerTag in Model.FlowerTags)
+                                   {
+                                       <a href="">@flowerTag.Tag.Name,</a>
+                                   }
+                                </span><br>
+                                <span style="color:@(Model.InStock ? "green" : "red")"> @(Model.InStock ? "Available" : "Not Available")</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tabs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="customtabs">
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">DESCRIPTION</button>
+                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">ADDITIONAL INFORMATION</button>
+                                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">REVIEWS (2)</button>
+
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <div class="customtab-inner">
+                                    <h3 class="tabh3">
+                                        The power of flowers </h3>
+                                    <p class="tabp">
+                                        @Model.Description
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <table class="shop_attributes">
+                                    <tbody>
+                                        <tr>
+                                            <th>Weight: </th>
+                                            <td class="product_weight">@Model.Weight</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Dimensions: </th>
+                                            <td class="product_dimensions">@Model.Dimension cm</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <div id="comments">
+                                    <h2 class="reviews-title">Reviews</h2>
+                                    <ul class="commentlist">
+                                        <li class="comment-even">
+                                            <div id="comment-1" class="comment_container">
+                                                <img src="~/Assets/images/h3-team-img-3.png" width="60" height="60">
+                                                <div class="comment-text">
+                                                    <p class="info">
+                                                        <span class="author">Joshua Garcia </span>
+                                                        <span class="time">27.04.2018</span>
+                                                    </p>
+                                                    <div class="description">
+                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="comment-odd">
+                                            <div id="comment-2" class="comment_container">
+                                                <img src="~/Assets/images/h3-team-img-2.png" width="60" height="60">
+                                                <div class="comment-text">
+                                                    <p class="info">
+                                                        <span class="author">Joan Stanley </span>
+                                                        <span class="time">27.04.2018</span>
+                                                    </p>
+                                                    <div class="description">
+                                                        <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="reviewform">
+                                    <div class="reviewtitle">
+                                        <h1>Add a review</h1>
+                                        <div class="form">
+                                            <form>
+                                                <div class="input mb-3">
+                                                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                                                    <p>Your email address will not be published. Required fields are marked * </p>
+                                                    <p>Your review *</p>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                </div>
+
+                                                <div class="input mb-3">
+                                                    <label for="exampleInputPassword1" class="form-label">Name*</label>
+                                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                                </div>
+                                                <div class="input mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Email*</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                </div>
+
+                                                <div class="mb-3 form-check">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label" for="exampleCheck1">Save my name, email, and website in this browser for the next time I comment.</label>
+                                                </div>
+                                                <button type="submit" class="btn">Submit</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="related">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 ">
+                        <h6 class="lefth6">RELATED PRODUCTS</h6>
+                    </div>
+                    <div class="inner">
+                     @foreach(var item in ViewBag.RelatedFlowers)
+                      {
+                          
+
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="item">
+                                 <div class="img">
+                                    <img src="~/Assets/images/@item.FlowerImages.FirstOrDefault().Image"alt="">
+                                 </div>
+                                 <div class="title">
+                                    <h6>MAJESTY PALM</h6>
+                                    <p id="normal">$259</p>
+                                    <p id="none"> ADD TO CART</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                               
+                                
+                      }
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+       @* <section id="product">
+            <div class="container">
+                <div class="row">
+                    
+                    
+                         @await Html.PartialAsync("_ParitialView",relate)
+                        
+                        
+                   
+                </div>
+            </div>
+        </section>*@
+    
+        @section Scripts{
+              
+    <script src="~/Assets/js/orange-amaryllis.js"></script>
+
+
+        }

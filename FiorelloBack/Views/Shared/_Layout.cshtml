@@ -1,0 +1,759 @@
+﻿@inject FiorelloBack.Services.LayoutService layoutService
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/Assets/scss/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Assets/scss/owl.theme.default.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Assets/slick.css">
+    <link rel="stylesheet" href="~/Assets/pgwslider.min.css">
+
+    <link rel="stylesheet" href="~/Assets/scss/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="stickynavbar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="">
+                            <img src="~/Assets/images/@layoutService.GetSettingDatas().Logo" width="210px" ; height="30px" alt=""></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                                            class="item_text active">HOME</span></a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#"><span class="item_text">Main
+                                                Home</span></a>
+                                        <a class="dropdown-item" href="#"><span class="item_text">Grid Home</span></a>
+                                        <a class="dropdown-item" href="#"><span class="item_text">Flower Show</span></a>
+                                        <a class="dropdown-item" href="#"><span class="item_text">Animated
+                                                Slider</span></a>
+                                        <a class="dropdown-item" href="#"><span class="item_text">Metro
+                                                Showcase</span></a>
+                                        <a class="dropdown-item" href="#"><span class="item_text">Carousel
+                                                Showcase</span></a>
+                                        <a class="dropdown-item" href="#"><span class="item_text">Landing</span></a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                                            class="item_text">PAGES</span></a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#"><span class="item_text">About
+                                                Us</span></a>
+                                        <a class="dropdown-item" href="#"><span class="item_text">FAQ Page</span></a>
+                                        <a class="dropdown-item" href="#"><span class="item_text">Contact
+                                                Us</span></a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                                            class="item_text">SHOP</span></a>
+                                    <div class="dropdown-menu shoptext222" aria-labelledby="navbarDropdown">
+                                        <ul class="HeadTextUl ">
+                                            <li class="headtext" style="height: 394px;">
+                                                <h5>Product Types</h5>
+                                                <ul>
+                                                    <li class="shopelements"><a href="orange-amaryllis.html"><span
+                                                                class="item_text">Standard product</span></a></li>
+                                                    <li class="shopelements"><a href="#"><span class="item_text">Grouped
+                                                                Product</span></a></li>
+                                                    <li class="shopelements"><a href="#"><span class="item_text">Variable
+                                                                Product</span></a></li>
+                                                    <li class="shopelements"><a href="#"><span class="item_text">Virtual
+                                                                Product</span></a></li>
+                                                    <li class="shopelements"><a href="#"><span class="item_text">External
+                                                                Product</span></a></li>
+                                                    <li class="shopelements"><a href="#"><span
+                                                                class="item_text">Downloadable Product</span></a></li>
+                                                    <li class="shopelements"><a href="#"><span class="item_text">On Sale
+                                                                Product</span></a></li>
+                                                    <li class="shopelements"><a href="#"><span class="item_text">Out of
+                                                                Stock Product</span></a></li>
+                                                    <li class="shopelements"><a href="#"><span class="item_text">New
+                                                                Product</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="headtext" style="height: 394px;">
+                                                <h5>Shop Pages</h5>
+                                                <ul>
+                                                    <li class="shopelements"><a href=""><span class="item_text">My
+                                                                Account</span></a></li>
+                                                    <li class="shopelements"><a href=""><span
+                                                                class="item_text">Cart</span></a></li>
+                                                    <li class="shopelements"><a href=""><span
+                                                                class="item_text">Checkout</span></a></li>
+                                                    <li class="shopelements"><a href=""><span
+                                                                class="item_text">Orders</span></a></li>
+                                                    <li class="shopelements"><a href=""><span
+                                                                class="item_text">Downloads</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="headtext" style="height: 394px;">
+                                                <h5>Shop Types</h5>
+                                                <ul>
+                                                    <li class="shopelements"><a href="#"><span
+                                                                class="item_text">Product List</a></span>
+                                                    </li>
+                                                    <li class="shopelements"><a href=""><span class="item_text">Without
+                                                                Sidebar</span></a></li>
+                                                    <li class="shopelements"><a href=""><span class="item_text">With
+                                                                Category Filter</span></a></li>
+                                                    <li class="shopelements"><a href=""><span class="item_text">With
+                                                                Ordering Filter</span></a></li>
+                                                    <li class="shopelements"><a href=""><span class="item_text">Shop
+                                                                Carousel</span></a></li>
+                                                    <li class="shopelements"><a href=""><span class="item_text">Product
+                                                                Categories</span></a></li>
+                                                    <li class="shopelements"><a href=""><span class="item_text">Single
+                                                                Category</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="headtext" style="height: 394px;">
+                                                <h5>Shop Layouts</h5>
+                                                <ul>
+                                                    <li class="shopelements"><a href=""><span class="item_text">Two
+                                                                Columns Grid</span></a></li>
+                                                    <li class="shopelements"><a href=""><span class="item_text">Three
+                                                                Columns Grid</span></a></li>
+                                                    <li class="shopelements"><a href=""><span class="item_text">Four
+                                                                Columns Grid</span></a></li>
+                                                    <li class="shopelements"><a href=""><span class="item_text">Four
+                                                                Columns Wide</span></a></li>
+                                                    <li class="shopelements"><a href=""><span class="item_text">Five
+                                                                Columns Wide</span></a></li>
+                                                    <li class="shopelements"><a href=""><span class="item_text">Six
+                                                                Columns Wide</span></a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                                            class="item_text">PORTFOLIO</span></a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a href=""><span class="item_text">Standard</span></a>
+                                        <br>
+                                        <a href=""><span class="item_text">Gallery</span></a><br>
+                                        <a href=""><span class="item_text">Masonry</span></a><br>
+                                        <ul class="newUl">
+                                            <li class="nav-item dropdown layoutelements"><a
+                                                    class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                    role="button" data-bs-toggle="dropdown" aria-expanded="false"><span
+                                                        class="item_text">Portfolio Layouts</span></a>
+                                                <ul class="dropdown-menu" style="top: 5px; left: 176px;"
+                                                    aria-labelledby="navbarDropdown">
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Two
+                                                                Columns</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Three
+                                                                Columns</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Four
+                                                                Columns</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Four
+                                                                Columns Wide</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Five
+                                                                Columns Wide</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item dropdown singleelements"><a
+                                                    class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                    role="button" data-bs-toggle="dropdown" aria-expanded="false"><span
+                                                        class="item_text">Portfolio Single</span></a>
+                                                <ul class="dropdown-menu" style="top: 0; left: 147px;"
+                                                    aria-labelledby="navbarDropdown">
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Small
+                                                                Images</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Small
+                                                                Slider</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Big
+                                                                Images</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Big
+                                                                Slider</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Gallery</span></a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
+                                        id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false"><span class="item_text">BLOG</span></a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#"><span class="item_text">Masonry</span></a>
+                                        <a class="dropdown-item" href="#"><span class="item_text">Standard</span>
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <ul class="newUl">
+                                                <li class="nav-item dropdown singleelements"><a
+                                                        class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                        role="button" data-bs-toggle="dropdown"
+                                                        aria-expanded="false"><span class="item_text">Post
+                                                            Types</span></a>
+                                                    <ul class="dropdown-menu" style="top: 0; left: 115px;"
+                                                        aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Standard</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Gallery</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Link</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Quote</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Audio</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Video</span></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        ELEMENTS
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <ul class="newUl">
+                                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
+                                                    id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"><span class="item_text">Classic</span></a>
+                                                <ul class="dropdown-menu" style="top: 0; left: 120px;"
+                                                    aria-labelledby="navbarDropdown">
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Accordions</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Tabs</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Buttons</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Video
+                                                                Button</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Contact Form</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
+                                                    id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"><span class="item_text">Infographic</span></a>
+                                                <ul class="dropdown-menu" style="top: 0; left: 120px;"
+                                                    aria-labelledby="navbarDropdown">
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Blog
+                                                                List</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Counters</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Countdown</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Google
+                                                                Maps</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Progress Bar</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Pie
+                                                                Charts</span></a></li>
+                                                </ul>
+                                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
+                                                    id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"><span class="item_text">Interactive</span></a>
+                                                <ul class="dropdown-menu " style="top: 0; left: 120px;"
+                                                    aria-labelledby="navbarDropdown">
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Image
+                                                                Gallery</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Testimonials</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Team</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Banner</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Shop
+                                                                List</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Portfolio List</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
+                                                    id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"><span class="item_text">Typography</span></a>
+                                                <ul class="dropdown-menu " style="top: 0; left: 120px;"
+                                                    aria-labelledby="navbarDropdown">
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Headings</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Columns</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Section Title</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Blockquote</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Dropcaps</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Highlights</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span
+                                                                class="item_text">Seperators</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="item_text">Custom
+                                                                Fonts</span></a></li>
+                                                </ul>
+                                            </li>
+                                </li>
+                            </ul>
+                        </div>
+                        </li>
+                        </ul>
+                </div>
+                </nav>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <header>
+
+        <section id="navmenu">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col col-lg-10 col-md-12 col-sm-12 col-12" style="padding: 20px;">
+                        <nav class="navbar navbar-expand-lg navbar-light ">
+                            <a class="navbar-brand" href="">
+                                <img src="~/Assets/images/@layoutService.GetSettingDatas().Logo" width="210px" ; height="30px" alt=""></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                                                class="item_text active">HOME</span></a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="#"><span class="item_text">Main
+                                                    Home</span></a>
+                                            <a class="dropdown-item" href="#"><span class="item_text">Grid
+                                                    Home</span></a>
+                                            <a class="dropdown-item" href="#"><span class="item_text">Flower
+                                                    Show</span></a>
+                                            <a class="dropdown-item" href="#"><span class="item_text">Animated
+                                                    Slider</span></a>
+                                            <a class="dropdown-item" href="#"><span class="item_text">Metro
+                                                    Showcase</span></a>
+                                            <a class="dropdown-item" href="#"><span class="item_text">Carousel
+                                                    Showcase</span></a>
+                                            <a class="dropdown-item" href="#"><span class="item_text">Landing</span></a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                                                class="item_text">PAGES</span></a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="#"><span class="item_text">About
+                                                    Us</span></a>
+                                            <a class="dropdown-item" href="#"><span class="item_text">FAQ
+                                                    Page</span></a>
+                                            <a class="dropdown-item" href="#"><span class="item_text">Contact
+                                                    Us</span></a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                                                class="item_text">SHOP</span></a>
+                                        <div class="dropdown-menu shoptext222" aria-labelledby="navbarDropdown">
+                                            <ul class="HeadTextUl ">
+                                                <li class="headtext" style="height: 394px;">
+                                                    <h5>Product Types</h5>
+                                                    <ul>
+                                                        <li class="shopelements"><a href="orange-amaryliss.html"><span
+                                                                    class="item_text">Standard product</span></a></li>
+                                                        <li class="shopelements"><a href=""><span
+                                                                    class="item_text">Grouped Product</span></a></li>
+                                                        <li class="shopelements"><a href=""><span
+                                                                    class="item_text">Variable Product</span></a></li>
+                                                        <li class="shopelements"><a href=""><span
+                                                                    class="item_text">Virtual Product</span></a></li>
+                                                        <li class="shopelements"><a href=""><span
+                                                                    class="item_text">External Product</span></a></li>
+                                                        <li class="shopelements"><a href=""><span
+                                                                    class="item_text">Downloadable Product</span></a>
+                                                        </li>
+                                                        <li class="shopelements"><a href=""><span class="item_text">On
+                                                                    Sale Product</span></a></li>
+                                                        <li class="shopelements"><a href=""><span class="item_text">Out
+                                                                    of Stock Product</span></a></li>
+                                                        <li class="shopelements"><a href=""><span class="item_text">New
+                                                                    Product</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="headtext" style="height: 394px;">
+                                                    <h5>Shop Pages</h5>
+                                                    <ul>
+                                                        <li class="shopelements"><a href="#"><span class="item_text">My
+                                                                    Account</span></a></li>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">Cart</span></a></li>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">Checkout</span></a></li>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">Orders</span></a></li>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">Downloads</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="headtext" style="height: 394px;">
+                                                    <h5>Shop Types</h5>
+                                                    <ul>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">Product List</a></span>
+                                                        </li>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">Without Sidebar</span></a></li>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">With Category Filter</span></a>
+                                                        </li>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">With Ordering Filter</span></a>
+                                                        </li>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">Shop Carousel</span></a></li>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">Product Categories</span></a></li>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">Single Category</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="headtext" style="height: 394px;">
+                                                    <h5>Shop Layouts</h5>
+                                                    <ul>
+                                                        <li class="shopelements"><a href="#"><span class="item_text">Two
+                                                                    Columns Grid</span></a></li>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">Three Columns Grid</span></a></li>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">Four Columns Grid</span></a></li>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">Four Columns Wide</span></a></li>
+                                                        <li class="shopelements"><a href="#"><span
+                                                                    class="item_text">Five Columns Wide</span></a></li>
+                                                        <li class="shopelements"><a href="3"><span class="item_text">Six
+                                                                    Columns Wide</span></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                                                class="item_text">PORTFOLIO</span></a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a href="#"><span class="item_text">Standard</span></a>
+                                            <br>
+                                            <a href="#"><span class="item_text">Gallery</span></a><br>
+                                            <a href="#"><span class="item_text">Masonry</span></a><br>
+                                            <ul class="newUl">
+                                                <li class="nav-item dropdown layoutelements"><a
+                                                        class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                        role="button" data-bs-toggle="dropdown"
+                                                        aria-expanded="false"><span class="item_text">Portfolio
+                                                            Layouts</span></a>
+                                                    <ul id="layoutelements" class="dropdown-menu"
+                                                        aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Two Columns</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Three Columns</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Four Columns</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Four Columns Wide</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Five Columns Wide</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="nav-item dropdown singleelements"><a
+                                                        class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                        role="button" data-bs-toggle="dropdown"
+                                                        aria-expanded="false"><span class="item_text">Portfolio
+                                                            Single</span></a>
+                                                    <ul id="singleelements" class="dropdown-menu"
+                                                        aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Small Images</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Small Slider</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Big Images</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Big Slider</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Gallery</span></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
+                                            id="navbarDropdown" role="button" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false"><span
+                                                class="item_text">BLOG</span></a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="#"><span class="item_text">Masonry</span></a>
+                                            <a class="dropdown-item" href="#"><span class="item_text">Standard</span>
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <ul class="newUl">
+                                                    <li class="nav-item dropdown singleelements"><a
+                                                            class="nav-link dropdown-toggle" href="#"
+                                                            id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                                            aria-expanded="false"><span class="item_text">Post
+                                                                Types</span></a>
+                                                        <ul class="posttypes">
+                                                            <li><a class="dropdown-item" href="#"><span
+                                                                        class="item_text">Standard</span></a></li>
+                                                            <li><a class="dropdown-item" href="#"><span
+                                                                        class="item_text">Gallery</span></a></li>
+                                                            <li><a class="dropdown-item" href="#"><span
+                                                                        class="item_text">Link</span></a></li>
+                                                            <li><a class="dropdown-item" href="#"><span
+                                                                        class="item_text">Quote</span></a></li>
+                                                            <li><a class="dropdown-item" href="#"><span
+                                                                        class="item_text">Audio</span></a></li>
+                                                            <li><a class="dropdown-item" href="#"><span
+                                                                        class="item_text">Video</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            ELEMENTS
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <ul class="newUl">
+                                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+                                                        href="#" id="navbarDropdown" role="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><span
+                                                            class="item_text">Classic</span></a>
+                                                    <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Accordions</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Tabs</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Buttons</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Video Button</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Contact Form</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+                                                        href="#" id="navbarDropdown" role="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><span
+                                                            class="item_text">Infographic</span></a>
+                                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Blog List</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Counters</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Countdown</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Google Maps</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Progress Bar</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Pie Charts</span></a></li>
+                                                    </ul>
+                                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+                                                        href="#" id="navbarDropdown" role="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><span
+                                                            class="item_text">Interactive</span></a>
+                                                    <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Image Gallery</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Testimonials</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Team</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Banner</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Shop List</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Portfolio List</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+                                                        href="#" id="navbarDropdown" role="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"><span
+                                                            class="item_text">Typography</span></a>
+                                                    <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Headings</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Columns</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Section Title</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Blockquote</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Dropcaps</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Highlights</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Seperators</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"><span
+                                                                    class="item_text">Custom Fonts</span></a></li>
+                                                    </ul>
+                                                </li>
+                                    </li>
+                                </ul>
+                            </div>
+                            </li>
+                            </ul>
+                    </div>
+                    </nav>
+                </div>
+                <div class="col-lg-2">
+                    <div class="icons">
+                        <div class="search">
+                            <a href="#">
+                                @Html.Raw(layoutService.GetSettingDatas().SearchIcon)
+
+                            </a>
+                            <form action="https://fiorello.qodeinteractive.com/">
+                                <div class="form-holder">
+                                    <input type="text" placeholder="Search" name="s" class="search-field"
+                                        autocomplete="off">
+                                    <button type="submit" class="search-submit search-submit-icon-pack">
+                                        <span aria-hidden="true" class="icon-font-elegant icon_search">
+                                            @Html.Raw(layoutService.GetSettingDatas().SearchIcon)
+                                        </span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <div class="bag">
+                            <a href="#">
+                               @Html.Raw(layoutService.GetSettingDatas().BasketIcon)
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        4
+                                    </span>
+                                </i>
+
+                                <span class="cart-icon-text">CART <span id="total-price"></span></span>
+                            </a>
+                            <div class="shopping-cart-dropdown"
+                                style="overflow-y: scroll; max-height: 150px; top: 50px;">
+                                <ul>
+                                    <!-- <li>
+                                            <div class="item-image-holder">
+                                                <img src="~/Assets/images/orange.5.jpg">
+                                            </div>
+                                            <div class="info-holder">
+                                                <h6 class="product-title"><a>Orange Amaryllis</a></h6>
+                                                <span class="quantity">4 x</span>
+                                                <span class="amount">$259</span>
+                                                <a><span class="icon-arrows-remove">
+                                                    <i></i>
+                                                </span></a>
+                                            </div>
+                                        </li> -->
+
+                                </ul>
+                                <div class="cart-bottom ">
+                                    <div class="subtotal-holder clearfix ">
+                                        <span class="total ">TOTAL:</span>
+                                        <span class="total-amount ">
+                                            0
+                                        </span>
+                                    </div>
+
+                                    <div class="btn-holder clearfix ">
+                                        <button type="button" class="btn btn-danger view">VIEW CART</button>
+                                        <button type="button" class="btn btn-dark check">CHECKOUT</button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            </div>
+        </section>
+    </header>
+        <main>
+            @RenderBody()
+        </main>
+ @await Component.InvokeAsync("Footer")
+    <div id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="~/Assets/js/parallax.min.js"></script>
+
+    <script src="~/Assets/js/owl.carousel.min.js"></script>
+    <script src="~/Assets/js/script.js"></script>
+    <script src="~/Assets/slick.min.js"></script>
+    @RenderSection("Scripts",false)
+
+
+    <script src="~/Assets/pgwslider.min.js"></script>
+  <script src="~/Assets/js/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+     </script>
+   
+</body>
+
+</html>

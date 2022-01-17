@@ -1,0 +1,40 @@
+﻿
+@model List<Flower>
+
+ @foreach (Flower flower in Model)
+                       {
+                         
+                                   <div class="col col-lg-3 col-md-4 col-sm-4 col-12 all   @foreach (FlowerCategory flowerCategory in flower.FlowerCategories ){
+                                                                @(flowerCategory.Category.Name.ToLower() + " ")
+                                            }" data-id="@flower.Id">
+                            <div class="top">
+                               @foreach (FlowerImage flowerImage in flower.FlowerImages)
+                              {
+                                  if (@flowerImage.IsMain == true)
+                                  {
+                                      <img src="~/Assets/images/@flowerImage.Image" alt="@flower.Name flower" title="@flower.Name" />
+                                  }
+                              }
+                            </div>
+                            <div class="title">
+                                <a asp-controller="flower" asp-action="details" asp-route-id="@flower.Id" asp-route-categoryId="@flower.FlowerCategories.FirstOrDefault().CategoryId">@flower.Name</a>
+                             <div>
+                                    
+                                  @if (flower.Campaign == null)
+                                   {   
+                                   <p id="buy"> Add to cart </p>
+                                   <p> <span>$</span><span>@flower.Price</span> </p>
+                                     }
+                                  else
+                                    {   
+                                     <p id="buy"> Add to cart </p>
+                                      <p><span style="text-decoration:line-through;">$@flower.Price </span> <span> $@(flower.Price*(100-flower.Campaign.DiscountPercent)/100)</span> </p>
+                                    }
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+                           
+                           
+                       }

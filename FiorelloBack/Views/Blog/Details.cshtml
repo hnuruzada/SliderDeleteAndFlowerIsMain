@@ -1,0 +1,76 @@
+﻿@model Blog
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="blog col-md-9">
+
+            
+            <div>
+                @foreach (BlogImage image in Model.BlogImages)
+                {
+                    if (image.IsMain)
+                    {
+                        <img width=550 src="@image.Image"/>
+                    }
+                }
+            </div>
+            <small> @Model.BlogCategory.Name</small>
+            <div class="Title">
+                <h3>@Model.Title</h3>
+        
+            </div>
+            <div class="desc">
+                <p>@Model.Description</p>
+            </div>
+           <div class="images">
+                @foreach (BlogImage image in Model.BlogImages)
+                {
+                    if (!image.IsMain)
+                    {
+                        <img src="@image.Image"/>
+                    }
+                }
+           </div>
+        </div>
+        <div class="category col-md-3">
+         <ul>
+              @foreach (BlogCategory blogCategory in ViewBag.Categories)
+          {
+             <li>
+                  @blogCategory.Name
+             </li>
+          }
+         </ul>
+
+         
+       @foreach (Blog blog in ViewBag.LastestBlogs as List<Blog>)
+        {
+            <div>
+
+              @foreach (BlogImage bimage in blog.BlogImages)
+                {
+                    if (bimage.IsMain)
+                    {
+                        <img width="100" src="@bimage.Image" />
+                    }
+                }
+                <div>
+                    @blog.Title
+                </div>
+                <div>
+                    @blog.DateTime
+                </div>
+               
+
+        </div>
+      }
+        
+        </div>
+
+    </div>
+    
+</div>
+

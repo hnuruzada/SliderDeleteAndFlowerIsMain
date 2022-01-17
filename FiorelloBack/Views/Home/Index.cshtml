@@ -1,0 +1,282 @@
+﻿@model HomeVM
+@using FiorelloBack.ViewModels
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section id="photo-slide">
+
+            <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="imagesSlide">
+                    <div class="imgscale">
+                        <i class="bi bi-arrow-right clickright"></i>
+                        <i class="bi bi-arrow-left clickleft"></i>
+                        <img id="loop" src="~/Assets/images/h3-slider-background.jpg" alt="">
+                    </div>
+                </div>
+                <div class="flowersInfo" >
+                    <div class="Infos">
+                        <div class="titleInfo">
+                            <span>Send</span><span>flowers</span><span>like</span><br>
+                            <span>you mean it.</span>
+                        </div>
+                        <div class="descInfo">
+                            <p>Where flowers are our inspiration to create lasting <br> memories. Whatever the occasion,
+                                our
+                                flowers will <br> make it special cursus a sit amet mauris. </p>
+                        </div>
+                    </div>
+
+                    <div class="signatureInfo">
+                        <img src="~/Assets/images/h2-sign-img.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="filter">
+            <div class="container">
+                <div id="categories">
+                    <div id="options">
+                        <ul class="row">
+                            <li class="col col-lg-1 col-md-2" data-category="all"> <a href="#" class="clickedColor"> All
+                                </a> </li>
+                            
+                            @foreach (Category category in Model.Categories)
+                           {
+                               <li class="col col-lg-1 col-md-2" data-category="@category.Name.ToLower()"> <a href="#"> @category.Name.ToUpper()</a> </li>
+                           }
+                        </ul>
+                    </div>
+                    <div id="select">
+                        <span> Filter <span><i class="fas fa-caret-down"></i></span></i>
+                            <div>
+                                <ul>
+
+                                            <h3> Price Range </h3>
+                                            <ul>
+                                                <li> <a href="#"> All </a> </li>
+                                                <li> <a href="#"> $0 - $10 </a> </li>
+                                                <li> <a href="#"> $10 - $20 </a> </li>
+                                                <li> <a href="#"> $20 - $30 </a> </li>
+                                                <li> <a href="#"> $30 - $40 </a> </li>
+                                                <li> <a href="#"> $40+ </a> </li>
+                                            </ul>
+
+                                </ul>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div id="cards">
+                    <div class="row row-cols-4 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                       @await Html.PartialAsync("_ParitialView",Model.Flowers)
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="videodesc">
+            <div class="container">
+                <div class="videotitles row row-cols-4 row-cols-md-3 row-cols-xl-4 ">
+                    <div class="video col col-lg-6 col-md-6 col-sm-12 col-12">
+                        <img src="~/Assets/images/h3-video-img.jpg" alt="">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="title col col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="centertitles">
+                            <h2>Suprise Your
+                                <span style="color: red;">Valentine!</span>
+                                <br>
+                                <span>Let us arrange a smile.</span>
+                            </h2>
+                            <p>Where flowers are our inspiration to create lasting memories. <br>Whatever the
+                                occasion...
+                            </p>
+                            <br>
+                            <div class="iconLists">
+                                <div class="lists">
+                                    <div class="icon">
+                                        <img src="~/Assets/images/h1-custom-icon.png" alt="">
+                                    </div>
+                                    <div class="list">
+                                        <p>Hand picked just for you.</p>
+                                    </div>
+                                </div>
+                                <div class="lists">
+                                    <div class="icon"><img src="~/Assets/images/h1-custom-icon.png" alt=""></div>
+                                    <div class="list">
+                                        <p>Unique flower arrangements</p>
+                                    </div>
+                                </div>
+                                <div class="lists">
+                                    <div class="icon"><img src="~/Assets/images/h1-custom-icon.png" alt=""></div>
+                                    <div class="list">
+                                        <p>Best way to say you care.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="ExpertsFlower">
+            <div class="container">
+                <div class="titleInfo">
+                    <div class="title">
+                        <h2>Flower Experts</h2>
+                    </div>
+                    <div>
+                        <div class="info">
+                            <p>A perfect blend of creativity, energy, communication, happiness and love. Let us <br>
+                                arrange a smile for you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="experts">
+                    <div class="row">
+                        @foreach (Position position in Model.Positions)
+                       {
+                           @foreach (FlowerExpert flowerExpert  in position.FlowerExperts )
+                          {
+                              <div class="col col-lg-2 col-md-6 col-sm-12 col-12">
+                            <div class="card">
+                                <div class="expertImage text-center">
+                                    <img src="~/Assets/images/@flowerExpert.Image" alt="">
+                                </div>
+                                <div class="nameInfo">
+                                    <h6>@flowerExpert.Fullname</h6>
+                                    <span>@position.Job</span>
+                                </div>
+                            </div>
+                        </div>
+                          }
+                       }
+                       
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="paralax">
+              
+          
+              <div class="parallax-window parlaxWindow" data-parallax="scroll"
+                data-image-src="./Assets/images/@Model.Setting.ParallaxImage">
+                <div class="parallaxBtnTitle">
+                    <div class="parallaxTitle">
+                        <h4>Join The Colorful Bunch!</h4>
+                    </div>
+                    <div class="parallaxBtn">
+                        <input type="email" value-size="40" style="padding: 20px;" placeholder="Email Address" required>
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+          
+        </section>
+        <section id="fromOurBlog">
+
+            <div class="container">
+                <div class="fromOurBlogTitle">
+                    <div class="BlogTitle">
+                        <h2>From our Blog</h2>
+                    </div>
+                    <div class="BlogInfo">
+                        <p>A perfect blend of creativity, energy, communication, happiness and love. Let us <br> arrange
+                            a
+                            smile for you.</p>
+                    </div>
+                </div>
+                <div class="Blogger row  row-cols-4 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col col-lg-4 col-md-4 col-sm-6 col-12">
+                        <div class="blogCards card bg-body">
+                            <div class="dateTime">
+                                <span>27.04.2018</span>
+                            </div>
+                            <div class="cardImage">
+                                <img src="~/Assets/images/blog-feature-img-1.jpg" class="card-img-top" alt="">
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="text-center">
+
+                                    <h6 class="fw-bolder">FLOWER POWER</h6>
+
+                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-md-4 col-sm-6 col-12">
+                        <div class="blogCards card bg-body">
+                            <div class="dateTime">
+                                <span>27.04.2018</span>
+                            </div>
+                            <div class="cardImage">
+                                <img src="~/Assets/images/blog-feature-img-3.jpg" class="card-img-top" alt="">
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="text-center">
+
+                                    <h6 class="fw-bolder">FLOWER POWER</h6>
+
+                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-md-4 col-sm-6 col-12">
+                        <div class="blogCards card bg-body">
+                            <div class="dateTime">
+                                <span>27.04.2018</span>
+                            </div>
+                            <div class="cardImage">
+                                <img src="~/Assets/images/blog-feature-img-4.jpg" class="card-img-top" alt="">
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="text-center">
+
+                                    <h6 class="fw-bolder">FLOWER POWER</h6>
+
+                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section id="lastHomeSlide">
+            <div class="container">
+                <div class="owl-carousel owl-theme">
+                    @foreach(FooterSlider footerSlider  in Model.FooterSliders )
+                   {
+                       <div class="item">
+                        <div class="profilPhoto">
+                            <img src="~/Assets/images/@footerSlider.Image" alt="">
+                        </div>
+                        <div class="profilInfo">
+                            <p>@footerSlider.Info
+                            </p>
+                        </div>
+                        <div class="profilName">
+                            <span>@footerSlider.Name</span><br>
+                            <P>@footerSlider.Position</P>
+                        </div>
+                    </div>
+                   }
+                    
+                </div>
+            </div>
+        </section>
+
+     
